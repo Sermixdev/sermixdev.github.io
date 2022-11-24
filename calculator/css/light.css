@@ -1,0 +1,260 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Courier New", Courier, monospace;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  width: 100%;
+  background-color: rgba(73, 53, 255, 0.8);
+  transition: all 1s;
+}
+body .calc {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 25%;
+  height: 65%;
+  border: 4px solid black;
+  border-radius: 50px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.8);
+  background-color: rgba(207, 237, 255, 0.74);
+}
+body .calc .display {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 25%;
+}
+body .calc .display span {
+  position: relative;
+  width: 95%;
+  height: 50%;
+  margin-top: 15px;
+  z-index: 1;
+}
+body .calc .display span::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(45deg, red, blue, deeppink, blue, red, blue, deeppink, blue);
+  background-size: 800%;
+  border-radius: 10px;
+  filter: blur(4px);
+  -webkit-animation: brillo 20s linear infinite;
+          animation: brillo 20s linear infinite;
+}
+body .calc .display span #frame {
+  z-index: 2;
+  width: 100%;
+  height: 100%;
+  padding: 10px;
+  font-weight: bold;
+  font-size: 20px;
+  text-align: right;
+  border: 1px solid blue;
+  border-radius: 12px;
+  outline: none;
+}
+body .calc .content {
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+  width: 100%;
+}
+body .calc .content .primera-col,
+body .calc .content .segunda-col,
+body .calc .content .tercera-col,
+body .calc .content .cuarta-col,
+body .calc .content .quinta-col {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  height: 100%;
+  gap: 15px;
+  margin-bottom: 5px;
+}
+body .calc .content .primera-col input,
+body .calc .content .segunda-col input,
+body .calc .content .tercera-col input,
+body .calc .content .cuarta-col input,
+body .calc .content .quinta-col input {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+  border-radius: 50%;
+  font-size: 50px;
+  cursor: pointer;
+  background-color: antiquewhite;
+  font-weight: bold;
+}
+body .calc .content .primera-col input:hover,
+body .calc .content .segunda-col input:hover,
+body .calc .content .tercera-col input:hover,
+body .calc .content .cuarta-col input:hover,
+body .calc .content .quinta-col input:hover {
+  box-shadow: 0 0 3px rgb(0, 0, 0) inset;
+}
+body .calc .content .primera-col input[value="."],
+body .calc .content .segunda-col input[value="."],
+body .calc .content .tercera-col input[value="."],
+body .calc .content .cuarta-col input[value="."],
+body .calc .content .quinta-col input[value="."] {
+  line-height: 80px;
+  font-size: 60px;
+}
+body .calc .content .primera-col input[value=C],
+body .calc .content .segunda-col input[value=C],
+body .calc .content .tercera-col input[value=C],
+body .calc .content .cuarta-col input[value=C],
+body .calc .content .quinta-col input[value=C] {
+  background-color: rgba(255, 0, 0, 0.733);
+  color: white;
+  font-weight: bold;
+}
+body .calc .content .primera-col input[value=C]:hover,
+body .calc .content .segunda-col input[value=C]:hover,
+body .calc .content .tercera-col input[value=C]:hover,
+body .calc .content .cuarta-col input[value=C]:hover,
+body .calc .content .quinta-col input[value=C]:hover {
+  box-shadow: 0 0 3px rgb(85, 1, 1) inset;
+}
+body .calc .content .primera-col .op,
+body .calc .content .segunda-col .op,
+body .calc .content .tercera-col .op,
+body .calc .content .cuarta-col .op,
+body .calc .content .quinta-col .op {
+  background-color: aqua;
+  color: rgb(97, 39, 173);
+  font-weight: bold;
+}
+body .calc .content .primera-col .op:hover,
+body .calc .content .segunda-col .op:hover,
+body .calc .content .tercera-col .op:hover,
+body .calc .content .cuarta-col .op:hover,
+body .calc .content .quinta-col .op:hover {
+  box-shadow: 0 0 4px rgb(0, 0, 0) inset;
+}
+body .calc .content .primera-col span,
+body .calc .content .segunda-col span,
+body .calc .content .tercera-col span,
+body .calc .content .cuarta-col span,
+body .calc .content .quinta-col span {
+  display: flex;
+  position: relative;
+  align-items: center;
+  justify-content: center;
+  width: 80px;
+  height: 80px;
+}
+body .calc .content .primera-col span .esp,
+body .calc .content .segunda-col span .esp,
+body .calc .content .tercera-col span .esp,
+body .calc .content .cuarta-col span .esp,
+body .calc .content .quinta-col span .esp {
+  position: relative;
+  font-size: 80px;
+  color: purple;
+  --ionicon-stroke-width: 40px;
+  transform: scale(1.2);
+  cursor: pointer;
+}
+body .calc .content .primera-col span .esp:hover,
+body .calc .content .segunda-col span .esp:hover,
+body .calc .content .tercera-col span .esp:hover,
+body .calc .content .cuarta-col span .esp:hover,
+body .calc .content .quinta-col span .esp:hover {
+  filter: drop-shadow(0 0 1px rgb(0, 0, 0));
+}
+body .calc .content .primera-col span .igual,
+body .calc .content .segunda-col span .igual,
+body .calc .content .tercera-col span .igual,
+body .calc .content .cuarta-col span .igual,
+body .calc .content .quinta-col span .igual {
+  transform: scale(1.5);
+}
+body .calc .content .primera-col span .igual:hover,
+body .calc .content .segunda-col span .igual:hover,
+body .calc .content .tercera-col span .igual:hover,
+body .calc .content .cuarta-col span .igual:hover,
+body .calc .content .quinta-col span .igual:hover {
+  filter: drop-shadow(0 0 1px rgb(10, 10, 10));
+}
+body .calc .content .primera-col span .swap,
+body .calc .content .segunda-col span .swap,
+body .calc .content .tercera-col span .swap,
+body .calc .content .cuarta-col span .swap,
+body .calc .content .quinta-col span .swap {
+  transform: scale(1);
+  color: rgb(235, 235, 140);
+  filter: drop-shadow(0 0 1px rgb(146, 145, 145));
+  transition: all 300ms;
+}
+body .calc .content .primera-col span .swap:hover,
+body .calc .content .segunda-col span .swap:hover,
+body .calc .content .tercera-col span .swap:hover,
+body .calc .content .cuarta-col span .swap:hover,
+body .calc .content .quinta-col span .swap:hover {
+  filter: drop-shadow(0 0 2px rgb(0, 0, 0));
+}
+body .calc .content .primera-col span .github,
+body .calc .content .segunda-col span .github,
+body .calc .content .tercera-col span .github,
+body .calc .content .cuarta-col span .github,
+body .calc .content .quinta-col span .github {
+  transform: scale(1);
+  color: rgb(255, 255, 255);
+  transition: all 300ms;
+}
+body .calc .content .primera-col span .github:hover,
+body .calc .content .segunda-col span .github:hover,
+body .calc .content .tercera-col span .github:hover,
+body .calc .content .cuarta-col span .github:hover,
+body .calc .content .quinta-col span .github:hover {
+  filter: drop-shadow(0 0 4px rgb(0, 0, 0));
+}
+
+@-webkit-keyframes brillo {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+
+@keyframes brillo {
+  0% {
+    background-position: 0 0;
+  }
+  50% {
+    background-position: 400% 0;
+  }
+  100% {
+    background-position: 0 0;
+  }
+}
+@media screen and (max-width: 1500px) {
+  body .calc {
+    width: 30%;
+  }
+}/*# sourceMappingURL=light.css.map */

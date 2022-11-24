@@ -2,14 +2,11 @@
 <html lang="es">
 <head>
     <!-- META  -->
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- JQUERY -->
-    <!-- <script src="js/jquery-3.6.1.js"></script> -->
-
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <!-- STYLES CSS / SASS  -->
-    <link rel="stylesheet" href="css/style.css">
+    <link id="theme" rel="stylesheet" href="css/light.css" />
     <!-- WEB TITLE  -->
     <title>Sermixdev | Calculator</title>
 </head>
@@ -17,36 +14,46 @@
     <section class="calc">
         <div class="display">
             <span>
-                <input type="text" name="frame" id="frame" readonly>
+            <input type="text" name="frame" id="frame" readonly />
             </span>
-            
-        </div>
-    
-        <div class="content">
-                <input type="button" value="SWAP" onclick="alHacerClick('')">
-                <input type="button" value="GIT" onclick="alHacerClick('')">
-                <input type="button" value="C" onclick="frame.value=''">
-                <input type="button" value="/" onclick="alHacerClick('/')">
-                <input type="button" value="7" onclick="alHacerClick(7)">
-                <input type="button" value="8" onclick="alHacerClick(8)">
-                <input type="button" value="9" onclick="alHacerClick(9)">
-                <input type="button" value="*" onclick="alHacerClick('*')">
-                <input type="button" value="4" onclick="alHacerClick(4)">
-                <input type="button" value="5" onclick="alHacerClick(5)">
-                <input type="button" value="6" onclick="alHacerClick(6)">
-                <input type="button" value="-" onclick="alHacerClick('-')">
-                <input type="button" value="1" onclick="alHacerClick(1)">
-                <input type="button" value="2" onclick="alHacerClick(2)">
-                <input type="button" value="3" onclick="alHacerClick(3)">
-                <input type="button" value="+" onclick="alHacerClick('+')">
-                <input type="button" value="." onclick="alHacerClick('.')">
-                <input type="button" value="0" onclick="alHacerClick(0)">
-                <input type="button" value="=" onclick="alHacerClick('=')">
         </div>
 
-        
+        <div class="content">
+            <div class="primera-col">
+                <span><ion-icon class="esp swap" id="cambioIcono" name="sunny-outline" onclick="cambiarTema()"></ion-icon></span>
+                <span><ion-icon class="esp github" name="logo-github"></ion-icon></span>
+                <input type="button" value="C" onclick="frame.value=''" />
+                <input class="op" type="button" value="/" onclick="alHacerClick('/')" />
+            </div>
+            <div class="segunda-col">
+                <input type="button" value="7" onclick="alHacerClick(7)" />
+                <input type="button" value="8" onclick="alHacerClick(8)" />
+                <input type="button" value="9" onclick="alHacerClick(9)" />
+                <input class="op" type="button" value="*" onclick="alHacerClick('*')" />
+            </div>
+            <div class="tercera-col">
+                <input type="button" value="4" onclick="alHacerClick(4)" />
+                <input type="button" value="5" onclick="alHacerClick(5)" />
+                <input type="button" value="6" onclick="alHacerClick(6)" />
+                <input class="op" type="button" value="-" onclick="alHacerClick('-')" />
+            </div>
+            <div class="cuarta-col">
+                <input type="button" value="1" onclick="alHacerClick(1)" />
+                <input type="button" value="2" onclick="alHacerClick(2)" />
+                <input type="button" value="3" onclick="alHacerClick(3)" />
+                <input class="op" type="button" value="+" onclick="alHacerClick('+')" />
+            </div>
+            <div class="quinta-col">
+                <input class="op" type="button" value="." onclick="alHacerClick('.')" />
+                <input type="button" value="0" onclick="alHacerClick(0)" />
+                <span><ion-icon class="esp delete" name="backspace-outline" onclick="alHacerClick('del')"></ion-icon></span>
+                <span><ion-icon class="esp igual" name="reorder-two-outline" onclick="alHacerClick('=')"></ion-icon></span>
+            </div>
+        </div>
     </section>
     <!-- SCRIPTS  -->
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <script src="js/index.js"></script>
-</body>
+    </body>
 </html>
