@@ -243,4 +243,78 @@ body .calc .content .quinta-col span .github:hover {
   100% {
     box-shadow: 0 0 2px black;
   }
+}
+@media screen and (max-width: 1500px) {
+  body .calc {
+    width: 30%;
+  }
+}
+@media screen and (max-width: 1286px) {
+  body .calc {
+    width: 40%;
+  }
+}
+@media screen and (max-width: 968px) {
+  body .calc {
+    width: 55%;
+  }
+}
+@media screen and (max-width: 728px) {
+  body .calc {
+    width: 65%;
+  }
+}
+@media screen and (max-width: 600px) {
+  body .calc {
+    width: 80%;
+  }
+}
+@media screen and (max-width: 478px) {
+  body .calc {
+    width: 95%;
+  }
+}
+@media screen and (max-width: 424px) {
+  body .calc {
+    width: 95%;
+    height: 45%;
+  }
+  body .calc .content .primera-col,
+body .calc .content .segunda-col,
+body .calc .content .tercera-col,
+body .calc .content .cuarta-col,
+body .calc .content .quinta-col {
+    gap: 0px;
+    height: 60px;
+    width: 100%;
+  }
+  body .calc .content .primera-col span,
+body .calc .content .segunda-col span,
+body .calc .content .tercera-col span,
+body .calc .content .cuarta-col span,
+body .calc .content .quinta-col span {
+    width: 60px;
+  }
+  body .calc .content .primera-col span .esp,
+body .calc .content .segunda-col span .esp,
+body .calc .content .tercera-col span .esp,
+body .calc .content .cuarta-col span .esp,
+body .calc .content .quinta-col span .esp {
+    font-size: 56px;
+  }
+  body .calc .content .primera-col input,
+body .calc .content .segunda-col input,
+body .calc .content .tercera-col input,
+body .calc .content .cuarta-col input,
+body .calc .content .quinta-col input {
+    height: 60px;
+    width: 60px;
+  }
+  body .calc .content .primera-col input[value="."],
+body .calc .content .segunda-col input[value="."],
+body .calc .content .tercera-col input[value="."],
+body .calc .content .cuarta-col input[value="."],
+body .calc .content .quinta-col input[value="."] {
+    line-height: 60px;
+  }
 }/*# sourceMappingURL=dark.css.map */

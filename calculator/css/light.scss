@@ -185,5 +185,71 @@ body{
             width: 30%;
         }
     }
-    
+}
+@media screen and (max-width: 1286px){
+    body{
+        .calc{
+            width: 40%;
+        }
+    }
+}
+@media screen and (max-width: 968px){
+    body{
+        .calc{
+            width: 55%;
+        }
+    }
+}
+@media screen and (max-width: 728px){
+    body{
+        .calc{
+            width: 65%;
+        }
+    }
+}
+@media screen and (max-width: 600px){
+    body{
+        .calc{
+            width: 80%;
+        }
+    }
+}
+@media screen and (max-width: 478px){
+    body{
+        .calc{
+            width: 95%;
+        }
+    }
+}
+@media screen and (max-width: 424px){
+    body{
+        .calc{
+            width: 95%;
+            height: 45%;
+            .content{
+                .primera-col,
+                .segunda-col,
+                .tercera-col,
+                .cuarta-col,
+                .quinta-col{
+                    gap: 0px;
+                    height: 60px;
+                    width: 100%;
+                    span{
+                        width: 60px;
+                        .esp{
+                            font-size: 56px;
+                        }
+                    }
+                    input{
+                        height: 60px;
+                        width: 60px;
+                    }
+                    input[value="."]{
+                        line-height: 60px;
+                    }
+                }
+            }
+        }
+    }
 }
